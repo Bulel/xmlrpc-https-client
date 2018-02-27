@@ -1,0 +1,91 @@
+Template of xml file:
+
+<?xml version='1.0'?>
+<methodCall>
+        <methodName>f5os_cli_config</methodName>
+        <params>
+                <param>
+                        <value><struct>
+                                <member>
+                                        <name>enable_passwd</name>
+                                        <value><string></string></value>
+                                </member>
+                                <member>
+                                        <name>username</name>
+                                        <value><string>admin</string></value>
+                                </member>
+                                <member>
+                                        <name>password</name>
+                                        <value><string>admin</string></value>
+                                </member>
+                                <member>
+                                        <name>num</name>
+                                        <value><int>1</int></value>
+                                </member>
+                                <member>
+                                        <name>cli_string0</name>
+                                        <value><string>user admin admin enable</string></value>
+                                </member>
+
+                        </struct></value>
+                </param>
+        </params>
+</methodCall>
+
+
+Example:
+
+(python3.5) test@smoketest:user$ python xmlhttps.py 192.168.1.17 9999 /cgi-bin/xmlrpc_server 7201020120.xml
+<?xml version='1.0'?>
+<methodCall>
+        <methodName>f5os_cli_config</methodName>
+        <params>
+                <param>
+                        <value><struct>
+                                <member>
+                                        <name>enable_passwd</name>
+                                        <value><string></string></value>
+                                </member>
+                                <member>
+                                        <name>username</name>
+                                        <value><string>admin</string></value>
+                                </member>
+                                <member>
+                                        <name>password</name>
+                                        <value><string>admin</string></value>
+                                </member>
+                                <member>
+                                        <name>num</name>
+                                        <value><int>1</int></value>
+                                </member>
+                                <member>
+                                        <name>cli_string0</name>
+                                        <value><string>user admin admin enable</string></value>
+                                </member>
+
+                        </struct></value>
+                </param>
+        </params>
+</methodCall>
+
+HTTP/1.1 200 OK
+Date: Wed, 26 Jul 2017 02:55:30 GMT
+Server: No Information
+Content-Length: 198
+Connection: close
+
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<methodResponse>
+<params>
+<param>
+  <value>
+   <string>
+Command 0:
+xmlrpc command successful
+
+</string>
+  </value>
+</param>
+</params>
+</methodResponse>
